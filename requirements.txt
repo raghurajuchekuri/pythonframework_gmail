@@ -1,0 +1,10 @@
+behave==1.2.6
+selenium==3.141.0
+paramiko
+requests
+peewee
+mysql
+behave2cucumber
+pyyaml
+mysqlclient==1.3.12
+zeep

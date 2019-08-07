@@ -1,0 +1,32 @@
+
+# URL configuration settings
+base_url: ""
+api_cart_url: ""
+
+# Screenshots settings
+screenshots_path: "tmp/jenkins/screenshots"
+screenshots_url: "tmp/jenkins/screenshots"
+
+screenshots: "tmp/jenkins/screenshots"
+
+
+resources:
+  chrome:
+    type: Website
+    ip: localhost
+    port: 4444
+    browser: chrome
+
+  firefox:
+    type: Website
+    ip: localhost
+    port: 4444
+    browser: firefox
+
+  mysql:
+    type: Database
+    ip: ""
+    user: autotion
+    password: password
+    port: 33
+    db: autation
