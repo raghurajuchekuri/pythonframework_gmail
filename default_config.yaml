@@ -1,7 +1,14 @@
+# Browser and Selenium setup
+#selenium:
+#  host: "localhost"
+#  port: 4444
+
+# Database environment settings
+db_environment: 'name_of_db'
 
 # URL configuration settings
-base_url: ""
-api_cart_url: ""
+base_url: "https://www.google.com/"
+api_cart_url: "https://www.google.com/api"
 
 # Screenshots settings
 screenshots_path: "tmp/jenkins/screenshots"
@@ -25,8 +32,8 @@ resources:
 
   mysql:
     type: Database
-    ip: ""
-    user: autotion
+    ip: 10.12.13.145
+    user: username
     password: password
-    port: 33
-    db: autation
+    port: 8888
+    db: automation

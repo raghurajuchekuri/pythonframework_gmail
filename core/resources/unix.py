@@ -1,7 +1,6 @@
 from core.runtime import connection_manager
 from core.resources.resource import GenericResource
 
-from core.lib.linuxshell import LinuxShell
 
 
 class Unix(GenericResource):

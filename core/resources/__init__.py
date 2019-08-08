@@ -1,6 +1,5 @@
 import logging
 from core.resources.resource import GenericResource
-from core.resources.unix import Unix
 from core.resources.web import Website
 from core.resources.database import Database
 

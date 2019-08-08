@@ -18,12 +18,12 @@ class DbConnection:
         self.port = port
         self.cursor = None
         self.db_connection = None
-        if db_type == "mysql":
-            self.db_connection = self.connect_mysql_db()
-            self.cursor = self.db_connection.cursor()
-
-        elif db_type not in SUPPORTED_DB_TYPES:
-            raise ValueError(f"{db_type} is currently not supported; Supported DB types: {SUPPORTED_DB_TYPES}")
+        # if db_type == "mysql":
+        #     # self.db_connection = self.connect_mysql_db()
+        #     # self.cursor = self.db_connection.cursor()
+        #
+        # elif db_type not in SUPPORTED_DB_TYPES:
+        #     raise ValueError(f"{db_type} is currently not supported; Supported DB types: {SUPPORTED_DB_TYPES}")
 
     def connect_mysql_db(self):
         """ Establishing database connection.

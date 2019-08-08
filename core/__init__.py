@@ -72,25 +72,25 @@ class FeatureClassNotFound(Exception):
 
 
 class Importer:
-    """Importer defines the interface to import a sample dynamically, and fetch callable attributes from it.
+    """Importer defines the interface to import a module dynamically, and fetch callable attributes from it.
     """
     def __init__(self, module=None):
         """Initializes the Importer object.
 
         Kwargs:
-            :sample: full sample path of type string, specified as a python package - a.b.c.d
+            :module: full module path of type string, specified as a python package - a.b.c.d
         """
         self._module = module
         self.imported = None
 
     def import_mod(self, module):
-        """Instance method imports the sample dynamically using the builtin import_module.
+        """Instance method imports the module dynamically using the builtin import_module.
 
         Kwargs:
-            :sample (str): full sample path specified as a python package - a.b.c.d
+            :module (str): full module path specified as a python package - a.b.c.d
 
         Raises:
-            :ImportError: in the event the sample cannot be imported.
+            :ImportError: in the event the module cannot be imported.
         """
         self._module = module
         try:
@@ -99,16 +99,16 @@ class Importer:
             raise
 
     def fetch_attribute(self, attrib):
-        """Instance method looks up an imported sample for the requested attribute using getattr.
+        """Instance method looks up an imported module for the requested attribute using getattr.
 
         Args:
-            :attrib: callable attribute name of type string, within the imported sample
+            :attrib: callable attribute name of type string, within the imported module
 
         Returns:
             :callable_attrib: callable form of the attribute.
 
         Raises:
-            :AttributeError: in the event the attribute cannot be fetched from the imported sample.
+            :AttributeError: in the event the attribute cannot be fetched from the imported module.
             :TypeError: in the event the attribute fetched cannot be called.
         """
         try:

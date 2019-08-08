@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 
 
 class HomePage:
+
     SEARCH = By.NAME, 'q'
     SUBMIT = By.NAME, 'btnK'
     RESULTS = By.ID, 'resultStats'
@@ -10,7 +11,7 @@ class HomePage:
     def __init__(self):
         self.driver = core.get(core.res['chrome'], feature="browser")._res.driver.webdriver
 
-    def navigate(self,host):
+    def navigate(self, host):
         self.driver.get(host)
 
     def search(self, text):

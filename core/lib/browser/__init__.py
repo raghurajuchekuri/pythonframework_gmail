@@ -1,4 +1,4 @@
-"""This sample contains the new Selenium wrapper class which essentially serves as the driver for all Web UI testing and
+"""This module contains the new Selenium wrapper class which essentially serves as the driver for all Web UI testing and
 provides helpful methods that make working with Selnium easier.
 """
 import os
@@ -47,7 +47,7 @@ class WebCore:
 
             # TODO make sure service log doesn't exist
             if not options:
-                    options = webdriver.ChromeOptions()
+                options = webdriver.ChromeOptions()
 
             prefs = {"download.default_directory": self.download_dir}
             options.add_experimental_option("prefs", prefs)
